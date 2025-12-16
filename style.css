@@ -50,7 +50,7 @@ a{text-decoration:none;color:inherit}
 
 .hero{padding:72px 0 56px}
 .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
-.hero-title{margin:0 0 10px;font-size:40px;line-height:1.2}
+.hero-title{margin:0 0 10px;font-size:30px;line-height:1.2}
 .hero-lead{margin:0 0 18px;color:var(--muted)}
 
 .visual-card{
