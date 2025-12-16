@@ -80,7 +80,7 @@ a{text-decoration:none;color:inherit}
 }
 .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
 /* Larger hero typography for stronger impact */
-.hero-title{margin:0 0 14px;font-size:42px;line-height:1.2}
+.hero-title{margin:0 0 14px;font-size:50px;line-height:1.2}
 .hero-lead{margin:0 0 26px;color:rgba(244,247,255,.88);font-size:19px}
 /* Hero visual refined into a simple device frame */
 .hero-visual{display:flex;justify-content:flex-end}
