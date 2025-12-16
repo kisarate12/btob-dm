@@ -82,7 +82,6 @@ a{text-decoration:none;color:inherit}
 /* Larger hero typography for stronger impact */
 .hero-title{margin:0 0 14px;font-size:42px;line-height:1.2}
 .hero-lead{margin:0 0 26px;color:rgba(244,247,255,.88);font-size:19px}
-
 /* Hero visual refined into a simple device frame */
 .hero-visual{display:flex;justify-content:flex-end}
 .hero .visual-card{
@@ -115,7 +114,6 @@ a{text-decoration:none;color:inherit}
   box-shadow:0 248px 0 rgba(255,255,255,.18);
 }
 .hero .visual-placeholder{position:relative}
-
 .hero-copy .btn-primary{padding-inline:22px;font-size:15px;font-weight:900}
 
 /* Brand mark replacement with provided logo image */
