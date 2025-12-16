@@ -43,17 +43,18 @@ a{text-decoration:none;color:inherit}
   border:1px solid transparent;font-weight:800;cursor:pointer;
 }
 .btn-primary{
-  /* Refined CTA styling for stronger contrast on navy background */
-  background:linear-gradient(135deg,#0b2e6f,#001b4d);
-  color:#fff;
-  border-color:rgba(255,255,255,.18);
-  box-shadow:0 10px 24px rgba(0,33,93,.22);
-  transition:transform .15s ease,box-shadow .15s ease,background .15s ease;
+  /* Brightened CTA color for stronger contrast on dark hero */
+  background:linear-gradient(135deg,#5fb7ff,#3b9dff);
+  color:#04112b;
+  border-color:rgba(255,255,255,.24);
+  box-shadow:0 12px 26px rgba(5,128,232,.28);
+  transition:transform .15s ease,box-shadow .15s ease,background .15s ease,color .15s ease;
 }
 .btn-primary:hover{
-  background:linear-gradient(135deg,#0f3a88,#06245e);
-  box-shadow:0 14px 28px rgba(0,33,93,.28);
+  background:linear-gradient(135deg,#7bcbff,#4daeff);
+  box-shadow:0 14px 30px rgba(5,128,232,.34);
   transform:translateY(-1px);
+  color:#021128;
 }
 .btn-ghost{border-color:var(--line);background:transparent}
 
@@ -62,7 +63,9 @@ a{text-decoration:none;color:inherit}
 
 .hero{
   position:relative;
-  padding:96px 0 80px;
+  /* Expanded vertical space to fill the viewport on desktop */
+  min-height:calc(100vh - 74px);
+  padding:120px 0 110px;
   color:#f4f7ff;
   overflow:hidden;
   /* Diagonal split background inspired by reference */
@@ -75,10 +78,10 @@ a{text-decoration:none;color:inherit}
   background:linear-gradient(120deg,rgba(12,30,76,.1),rgba(0,27,77,.25));
   pointer-events:none;
 }
-.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center}
-.hero-title{margin:0 0 12px;font-size:30px;line-height:1.2}
-.hero-lead{margin:0 0 22px;color:rgba(244,247,255,.82)}
-
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+/* Larger hero typography for stronger impact */
+.hero-title{margin:0 0 14px;font-size:42px;line-height:1.2}
+.hero-lead{margin:0 0 26px;color:rgba(244,247,255,.88);font-size:19px}
 /* Hero visual refined into a simple device frame */
 .hero-visual{display:flex;justify-content:flex-end}
 .hero .visual-card{
@@ -90,7 +93,7 @@ a{text-decoration:none;color:inherit}
   max-width:360px;width:100%;
 }
 .hero .visual-placeholder{
-  height:300px;
+  height:340px;
   border-radius:22px;
   border:1px solid rgba(255,255,255,.2);
   background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
@@ -111,8 +114,17 @@ a{text-decoration:none;color:inherit}
   box-shadow:0 248px 0 rgba(255,255,255,.18);
 }
 .hero .visual-placeholder{position:relative}
+.hero-copy .btn-primary{padding-inline:22px;font-size:15px;font-weight:900}
 
-.hero-copy .btn-primary{padding-inline:20px}
+/* Brand mark replacement with provided logo image */
+.brand-name{
+  display:block;
+  width:170px;
+  height:34px;
+  background:url('./img/logo-main.png') center/contain no-repeat;
+  text-indent:-9999px;
+  overflow:hidden;
+}
 
 .visual-card{
   background:var(--card);border:1px solid var(--line);
@@ -211,8 +223,8 @@ a{text-decoration:none;color:inherit}
 
 @media (max-width: 900px){
   /* Adjust hero balance for narrow screens */
-  .hero{padding:80px 0 70px;background:linear-gradient(150deg,#001b4d 0%,#001b4d 58%,#0b2e6f 58%,#0b2e6f 100%)}
-  .hero-inner{grid-template-columns:1fr;gap:26px}
+  .hero{padding:90px 0 78px;min-height:auto;background:linear-gradient(150deg,#001b4d 0%,#001b4d 58%,#0b2e6f 58%,#0b2e6f 100%)}
+  .hero-inner{grid-template-columns:1fr;gap:28px}
   .hero-visual{justify-content:center}
   .hero .visual-card{max-width:320px}
   .grid-3{grid-template-columns:1fr}
@@ -220,4 +232,5 @@ a{text-decoration:none;color:inherit}
   .steps{grid-template-columns:1fr}
   .cta-panel{grid-template-columns:1fr}
   .hero-title{font-size:34px}
+  .hero-lead{font-size:17px}
 }
