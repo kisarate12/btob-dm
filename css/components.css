@@ -1,0 +1,238 @@
+/* =========================
+   components.css
+   - Reusable UI components
+   - Buttons / Cards / Forms / UI blocks
+========================= */
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    font-weight: 800;
+    font-size: 16px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #5fb7ff, #3b9dff);
+    color: #04112b;
+    border-color: rgba(255, 255, 255, .24);
+    box-shadow: 0 12px 26px rgba(5, 128, 232, .28);
+    transition: transform .15s ease,
+        box-shadow .15s ease,
+        background .15s ease,
+        color .15s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #7bcbff, #4daeff);
+    box-shadow: 0 14px 30px rgba(5, 128, 232, .34);
+    transform: translateY(-1px);
+    color: #021128;
+}
+
+.btn-ghost {
+    background: transparent;
+    border-color: var(--line);
+}
+
+.btn-lg {
+    padding: 12px 18px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+
+/* ---------- Cards ---------- */
+.card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(2, 6, 23, .04);
+}
+
+.card-title {
+    margin: 0 0 6px;
+    font-size: 16px;
+}
+
+.card-text {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* ---------- Callout / Panel ---------- */
+.callout {
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.callout-quote {
+    margin: 0;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.panel {
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 22px;
+}
+
+.panel-text {
+    margin: 0;
+    color: var(--muted);
+}
+
+
+/* ---------- Feature / Stack ---------- */
+.stack {
+    max-width: 920px;
+    margin: 0 auto;
+    display: grid;
+    gap: 14px;
+}
+
+.feature {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px;
+}
+
+.feature-title {
+    margin: 0 0 6px;
+    font-size: 15px;
+}
+
+.feature-text {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* ---------- Steps ---------- */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.step {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px;
+}
+
+.step-title {
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+
+.step-text {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* ---------- FAQ ---------- */
+.faq-list {
+    max-width: 920px;
+    margin: 0 auto;
+    display: grid;
+    gap: 10px;
+}
+
+.faq-item {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 12px 14px;
+}
+
+.faq-item summary {
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.faq-body {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* ---------- CTA ---------- */
+.cta-panel {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 18px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: calc(var(--radius) + 4px);
+    padding: 22px;
+    box-shadow: var(--shadow);
+}
+
+.cta-title {
+    margin: 0 0 6px;
+    font-size: 22px;
+}
+
+.cta-text {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* ---------- Forms ---------- */
+.form {
+    display: grid;
+    gap: 12px;
+}
+
+.field {
+    display: grid;
+    gap: 6px;
+}
+
+.field-label {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 900;
+}
+
+.input {
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    padding: 0 12px;
+    outline: none;
+}
+
+.input:focus {
+    border-color: rgba(37, 99, 235, .45);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, .10);
+}
