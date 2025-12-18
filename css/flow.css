@@ -1,0 +1,97 @@
+/* 横並びはgridよりflexの方が崩れにくい */
+.flow-steps {
+    margin-top: 28px;
+    display: flex;
+    gap: 28px;
+    align-items: stretch;
+}
+
+/* 5枚を均等に */
+.flow-step {
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+
+/* カードは高さを揃える */
+.flow-card {
+    background: #eef6ff;
+    border-radius: 18px;
+    padding: 64px 18px 18px;
+    /* バッジ分をしっかり確保 */
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* バッジ（半円）位置の安定化 */
+.flow-badge {
+    position: absolute;
+    top: 0;
+    /* cardの上に必ず乗る */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 76px;
+    background: #fff;
+    border-bottom-left-radius: 999px;
+    border-bottom-right-radius: 999px;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+    z-index: 2;
+}
+
+/* タイトルと本文の整形 */
+.flow-title {
+    font-weight: 700;
+    color: #00215d;
+    font-size: 18px;
+    line-height: 1.35;
+    margin: 25px 0 10px;
+}
+
+.flow-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #333;
+    margin: 0;
+}
+
+/* 矢印：各カードの“中央”に固定して繋ぐ */
+@media (min-width: 901px) {
+    .flow-step:not(:last-child)::after {
+        content: "→";
+        position: absolute;
+        right: -20px;
+        /* gapに合わせて調整 */
+        top: 50%;
+        transform: translateY(-10%);
+        /* バッジ分だけ少し上げる */
+        color: #0b6bd3;
+        font-weight: 700;
+        font-size: 22px;
+        z-index: 3;
+        pointer-events: none;
+    }
+}
+
+/* レスポンシブ */
+@media (max-width: 900px) {
+    .flow-steps {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .flow-step::after {
+        content: none !important;
+    }
+}
+
+@media (max-width: 520px) {
+    .flow-steps {
+        grid-template-columns: 1fr;
+    }
+}

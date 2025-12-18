@@ -73,6 +73,6 @@ select {
 
 /* 4) Basic helpers (最小限) */
 .container {
-    width: min(var(--container), calc(100% - 40px));
+    width: min(var(--container), calc(100% - 10%));
     margin: 0 auto;
 }
