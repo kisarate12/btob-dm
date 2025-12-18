@@ -5,176 +5,57 @@
 
 .hero {
     position: relative;
-    min-height: calc(50vh);
-    /* heroの全体サイズ */
-    padding: 60px 0 110px;
+    padding: 96px 0 110px;
     color: #f4f7ff;
-    overflow: visible;
+    overflow: hidden;
     background: linear-gradient(135deg,
             #001b4d 0%,
-            #001b4d 58%,
-            #0b2e6f 58%,
+            #001b4d 52%,
+            #0b2e6f 52%,
             #0b2e6f 100%);
 }
 
 .hero::before {
     content: "";
-    z-index: 1;
+    position: absolute;
     inset: 0;
-    background: linear-gradient(120deg, rgba(12, 30, 76, .1), rgba(0, 27, 77, .25));
+    background: linear-gradient(120deg, rgba(12, 30, 76, .22), rgba(0, 27, 77, .3));
     pointer-events: none;
 }
 
 .hero-inner {
-    grid-template-columns: minmax(900px, 1.2fr) 1fr;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    align-items: center;
+    min-height: 440px;
 }
 
 .hero-copy {
-    max-width: 900px;
-    /* 文章の読みやすさも守れる */
-}
-
-.hero-copy-wrap {
-    width: min(1120px, calc(100% - 80px));
-    /* ← ここで“広げる” */
-    margin-left: 100px;
-    /* ← 左にスペースを確保 */
-    margin-right: auto;
-    /* ← 右は自然に */
-}
-
-/* Copy */
-.hero-title {
-    margin: 0 0 16px;
-    font-size: 50px;
-    line-height: 1.15;
-}
-
-.hero-lead {
-    margin: 0 0 30px;
-    color: rgba(244, 247, 255, .88);
-    font-size: 18px;
-}
-
-.hero-copy .btn-primary {
-    padding-inline: 24px;
-    font-size: 17px;
-    font-weight: 900;
-}
-
-.visual-placeholder {
-    height: 220px;
-    border-radius: 14px;
-    border: 1px dashed rgba(37, 99, 235, .35);
-    background: linear-gradient(135deg, rgba(37, 99, 235, .08), rgba(15, 23, 42, .04));
+    max-width: 760px;
     display: grid;
-    place-items: center;
-    color: var(--muted);
-    font-weight: 800;
+    gap: 14px;
 }
 
-.visual-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-}
-
-/* Brand (logo) */
 .hero-logo {
-    height: 100px;
+    height: 90px;
     width: auto;
     max-width: none;
     object-fit: contain;
-    display: block;
 }
 
-.hero-visual {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: clamp(12px, 2vw, 28px);
-    /* 右端に少し余白 */
-    overflow: visible;
-    position: relative;
-    z-index: 2;
-}
-
-.hero-cards {
-    display: grid;
-    gap: 38px;
-    justify-items: end;
-
-    width: min(900px, calc(100vw - 560px));
-    /* ←左を潰さず、右も切れない上限 */
-}
-
-
-.hero-card {
-    position: relative;
-    background: #fff;
-    box-shadow: 0 12px 28px rgba(0, 0, 0, .12);
-    width: min(980px, calc(100vw - 560px));
-    --cut: 110px;
-    clip-path: polygon(var(--cut) 0, 100% 0, 100% 100%, 0 100%, 0 var(--cut));
-}
-
-.card-body {
-    padding: 28px 40px 28px 140px;
-    /* ←数字分だけ左を空ける */
-    color: #0b2e6f;
-}
-
-.hero-card-title {
+.hero-title {
     margin: 0;
-    font-size: 30px;
-    line-height: 1.15;
-    letter-spacing: .02em;
-    font-weight: 900;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
 }
 
-.card-no {
-    z-index: 2;
-    position: absolute;
-    left: -78px;
-    /* ←白枠からはみ出す */
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 108px;
-    font-weight: 900;
-    line-height: 1;
-    color: rgba(11, 46, 111, .18);
-    /* 塗り（薄い青） */
-    -webkit-text-stroke: 6px #ffffff;
-    /* 縁取り（白） */
-    text-shadow:
-        0 10px 24px rgba(0, 0, 0, .16);
-    /* 影で浮かせる（strokeが効かない環境でもそれっぽい） */
-    pointer-events: none;
-    user-select: none;
+.hero-lead {
+    margin: 0 0 8px;
+    color: rgba(244, 247, 255, .9);
+    font-size: 18px;
 }
 
-.card-1 {
-    width: 60%;
-    height: 110px;
-}
-
-.card-2 {
-    width: 80%;
-    height: 110px;
-}
-
-.card-3 {
-    width: 100%;
-    height: 110px;
-}
-
-.card-1 .card-no {
-    font-size: 112px;
-}
-
-.card-2 .card-no {
-    font-size: 112px;
-}
-
-.card-3 .card-no {
-    font-size: 112px;
+.hero .btn-primary {
+    align-self: flex-start;
 }

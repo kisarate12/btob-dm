@@ -1,0 +1,21 @@
+/* =========================
+   footer.css
+   - Footer styles
+========================= */
+
+.site-footer {
+    border-top: 1px solid var(--line);
+    padding: 22px 0;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--muted);
+}
+
+.company-logo {
+    height: 32px;
+    width: auto;
+}
