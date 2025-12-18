@@ -1,0 +1,44 @@
+/* =========================
+   solution.css
+   - Solution / appeal section
+========================= */
+
+.solution-section {
+    background: rgba(220, 234, 247, .85);
+}
+
+.solution-logo {
+    width: auto;
+    display: inline-block;
+    height: 2.2em;
+    vertical-align: middle;
+}
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.solution-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px 26px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    height: 100%;
+}
+
+.solution-title {
+    font-weight: 700;
+    color: #001b4d;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.solution-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+    margin: 0;
+}

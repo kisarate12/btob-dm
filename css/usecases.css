@@ -1,0 +1,56 @@
+/* =========================
+   usecases.css
+   - Use cases section
+========================= */
+
+.usecase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.usecase-card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (hover:hover) {
+    .usecase-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.10);
+    }
+}
+
+.usecase-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #e6eef7;
+    overflow: hidden;
+}
+
+.usecase-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.usecase-body {
+    padding: 22px 24px 26px;
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start;
+}
+
+.usecase-text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #1a1a1a;
+    margin: 0;
+}
